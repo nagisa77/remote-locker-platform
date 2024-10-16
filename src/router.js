@@ -9,7 +9,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHashHistory(process.env.NODE_ENV === 'production' ? '/remote-locker-platform/' : '/'),
   routes,
 });
 
